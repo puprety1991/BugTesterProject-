@@ -27,7 +27,7 @@ public class CommonMethods extends PageInitializer {
                 ChromeOptions chromeOptions=new ChromeOptions();
                 chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
-                chromeOptions.setHeadless(false);
+                chromeOptions.setHeadless(true);
                 driver=new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
