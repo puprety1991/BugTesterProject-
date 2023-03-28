@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 //it will execute only new scenarios
                 //dryRun =true
                 //when we set dryRun to false will execute all again
-                dryRun= true,
+                dryRun= false,
                 //to execute test cases from different sprint's like below
                 tags="@Smoke",
                 // to remove irrelevant info from concole you need to say monochrome to true
