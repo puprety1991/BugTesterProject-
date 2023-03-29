@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
                 //when we set dryRun to false will execute all again
                 dryRun= false,
                 //to execute test cases from different sprint's like below
-                tags="@Smoke",
+                tags="@test1",
                 // to remove irrelevant info from concole you need to say monochrome to true
                 monochrome = true,
                 plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",

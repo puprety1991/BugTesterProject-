@@ -24,15 +24,15 @@ public class CommonMethods extends PageInitializer {
         switch (ConfigReader.getPropertyValue("browser")) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                ChromeOptions chromeOptions=new ChromeOptions();
+                ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--no-sandbox");
                 chromeOptions.addArguments("--disable-dev-shm-usage");
 
                 chromeOptions.setHeadless(false);
 
-                chromeOptions.setHeadless(true);
+                //chromeOptions.setHeadless(true);
 
-                driver=new ChromeDriver(chromeOptions);
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -101,6 +101,7 @@ public class CommonMethods extends PageInitializer {
         Alert a = driver.switchTo().alert();// alerts for pop ups
         a.getText();
     }
+
     public static byte[] takeScreenshot(String fileName) {
         TakesScreenshot ts = (TakesScreenshot) driver;
         byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
@@ -123,12 +124,12 @@ public class CommonMethods extends PageInitializer {
         return sdf.format(date);
     }
 
-     public static void clickRadioButton (WebElement element){
-        if (element.isEnabled()){
-            if(!element.isSelected()){
+    public static void clickRadioButton(WebElement element) {
+        if (element.isEnabled()) {
+            if (!element.isSelected()) {
                 element.click();
             }
         }
-     }
+    }
 
 }
