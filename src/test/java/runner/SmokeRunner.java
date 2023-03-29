@@ -20,7 +20,9 @@ import org.junit.runner.RunWith;
                 tags="@Smoke",
                 // to remove irrelevant info from concole you need to say monochrome to true
                 monochrome = true,
-                plugin = {"pretty"}
+                plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",
+                        //this failed.txt file holds all the scenarios which are failed  during execution
+                        "rerun:target/failed.txt"}
         )
 
 public class SmokeRunner {
