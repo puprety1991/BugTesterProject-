@@ -4,7 +4,8 @@ import pages.LoginPage;
 
 public class PageInitializer {
    public static LoginPage loginPage;
-    public static void initObject(){
+
+   public static void initObject(){
 
         loginPage = new LoginPage();
     }
